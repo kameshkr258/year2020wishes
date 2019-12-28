@@ -1,7 +1,8 @@
 var name=prompt("Please enter your name", "Name");
 	if (name != null) {
 
-        var wisher = "Alex";
+        var wisher = GetURLParameter('name');
+		
         document.getElementById("wish").innerHTML =
         "<br><br>Hi " + name + "<br>"+wisher+" Wishes You Happy New Year";
         
@@ -17,7 +18,7 @@ var name=prompt("Please enter your name", "Name");
 
     }
    
-	
+
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 1, 2019 00:00:00").getTime();
 
@@ -71,6 +72,19 @@ var canvas = document.getElementById('canvas'),
 canvas.width = cw;
 canvas.height = ch;
 
+function GetURLParameter(sParam){
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+	
 function random(min, max) {
     return Math.random() * (max - min) + min;
 }
