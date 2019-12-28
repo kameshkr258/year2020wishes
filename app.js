@@ -2,19 +2,16 @@ var name=prompt("Please enter your name", "Name");
 	if (name != null) {
 
         var wisher = GetURLParameter('name');
-		
-        document.getElementById("wish").innerHTML =
-        "<br><br>Hi " + name + "<br>"+wisher+" Wishes You Happy New Year";
+		alert(name +" - "+wisher);
+        document.getElementById("wish").innerHTML = "<br><br>Hi " + name + "<br>"+wisher+" Wishes You Happy New Year";
         
       }
       else
        
-        document.getElementById("wish").innerHTML =
-        "<br><br>Hi " + name + "<br> Wish You Happy New Year";
+        document.getElementById("wish").innerHTML =    "<br><br>Hi " + name + "<br> Wish You Happy New Year";
     
     if(name=="null"){
-    	document.getElementById("wish").innerHTML =
-        "Wish You Happy New Year";
+    	document.getElementById("wish").innerHTML =    "Wish You Happy New Year";
 
     }
    
