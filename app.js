@@ -2,9 +2,10 @@ var name=prompt("Please enter your name", "Name");
 	if (name != null) {
 
         var wisher = GetURLParameter('from');
-
-        document.getElementById("wish").innerHTML = "<br><br>Hi " + name + "<br>"+wisher+" Wishes You Happy New Year";
-        
+		
+		alert(name+" - "+wisher);
+		
+        document.getElementById("wish").innerHTML = "<br><br>Hi " + name + "<br>"+wisher+" Wishes You Happy New Year";   
       }
       else
        
@@ -41,7 +42,7 @@ var x = setInterval(function() {
     // If the count down is over, write some text 
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "Enjoy 2019";
+        document.getElementById("demo").innerHTML = "Enjoy 2020";
     }
 }, 1000);
 
