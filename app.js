@@ -1,8 +1,8 @@
 var name=prompt("Please enter your name", "Name");
 	if (name != null) {
 
-        var wisher = GetURLParameter('name');
-		alert(name +" - "+wisher);
+        var wisher = GetURLParameter('from');
+
         document.getElementById("wish").innerHTML = "<br><br>Hi " + name + "<br>"+wisher+" Wishes You Happy New Year";
         
       }
@@ -17,7 +17,7 @@ var name=prompt("Please enter your name", "Name");
    
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2019 00:00:00").getTime();
+var countDownDate = new Date("Jan 1, 2020 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
